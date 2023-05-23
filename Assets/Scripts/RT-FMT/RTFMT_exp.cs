@@ -1,5 +1,5 @@
 ﻿#define _FIX_SEED_
-//#define _DEBUG_0_ // Draw tree
+#define _DEBUG_0_ // Draw tree
 
 //#define _DEBUG_1_ // Log text + raycast
 //#define _DEBUG_2_ // Draw spheres
@@ -90,6 +90,7 @@ public class RTFMT_exp : MonoBehaviour
         dynamicObstacles.Remove(this.transform); // Remove itself in case the robot is also a dynamic obstacle
         planner = new RTFMTPlanner(xBound, yBound, fixedObstaclesLayer, 2, this, dynamicObstacles, ballRadius, safeRadiusDObstacle, checkDObstacleDistance); //20
         planner.init(this.transform.position, iterationExperiment);
+        //goalPosition.y = ballRadius;
         planner.setGoal(goalPosition);
         //planner.setGoal(new Vector3(0, ballRadius, 13));
         //planner.setGoal(new Vector3(0, ballRadius, 10));

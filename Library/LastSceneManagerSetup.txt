@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Experiments/Experiment 3/RTFMT_wall_1.unity
+- path: Assets/Scenes/Example/RTFMT_maze_1.unity
   isLoaded: 1
   isActive: 1

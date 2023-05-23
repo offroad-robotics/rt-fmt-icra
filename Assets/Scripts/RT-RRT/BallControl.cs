@@ -19,7 +19,7 @@ public class BallControl : MonoBehaviour
     public bool FlagInformedSampling = true;
     public bool FlagRewiringCircle = true;
 
-    static public bool flag_debug_on = false;
+    static public bool flag_debug_on = true;
 
     public class regionInfo
     {
@@ -1011,7 +1011,7 @@ public class BallControl : MonoBehaviour
                 if (cNode.indexOfFather >= 0 && flag_debug_on && FlagUseColor)
                 {
                     mNodeRRT fNode = (mNodeRRT)TreeNodes[cNode.indexOfFather];
-                    //Debug.DrawLine(cNode.objectPosition, fNode.objectPosition, Color.magenta);
+                    Debug.DrawLine(cNode.objectPosition, fNode.objectPosition, Color.magenta);
                 }
                 if (cNode.cost_to_reach != float.MaxValue)
                     added_node_cost = cNode.cost_to_reach;
@@ -1596,8 +1596,8 @@ public class BallControl : MonoBehaviour
             Vector2 center_SandE = (S_Point + E_Point) / 2f;
 
             Vector2 n_sample = new Vector2((float)rotated_x, (float)rotated_y) + center_SandE;//new Vector2((float)rotated_x, (float)rotated_y);
-            if (FlagUseColor)
-                Debug.DrawLine((new Vector3(center_SandE[0], 0.5f, center_SandE[1])), (new Vector3(n_sample[0], 0.5f, n_sample[1])), Color.blue);
+            //if (FlagUseColor)
+            //    Debug.DrawLine((new Vector3(center_SandE[0], 0.5f, center_SandE[1])), (new Vector3(n_sample[0], 0.5f, n_sample[1])), Color.blue);
 
             return n_sample;
         }
