@@ -6,6 +6,12 @@ This repository contains the implementation of the Real-Time Fast Marching Tree 
 ## Simulation Results:
 The repository includes simulation code demonstrating the superior performance of RT-FMT compared to RT-RRT* in terms of execution cost and arrival time in most scenarios. The simulations also showcase the benefits of taking a local path before the global path is available, emphasizing the algorithm's capability to reduce arrival time even when faced with the possibility of selecting an inferior path.
 
+<div style="display:flex;">
+  <img src="images/dynamic_example.gif" alt="First GIF" width="48%" style="margin-right:2%;" />
+  <div style="border-left:2px solid #333; height:auto;"></div>
+  <img src="images/maze_example.gif" alt="Second GIF" width="48%" style="margin-left:2%;" />
+</div>
+
 ## Getting started
 - Install and open the unity hub software, then open a new project in the cloned repository folder. If you haven't done so It will ask you to install unity 2018.1.0f2
 - Once you open the imported project, you will find all scenes under the `Assets/Scenes` folder, and the code related to the paper can be found in the `Assets/Scripts/RT-FMT` folder.
